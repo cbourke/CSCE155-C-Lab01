@@ -1,7 +1,7 @@
 /**
-  Author: Chris Bourke
-  Date: xx/xx/20xx
-  Hello World in C 
+   Author: Chris Bourke
+   Date: xx/xx/20xx
+   Hello World in C 
 */ 
 
 #include <stdio.h> 
