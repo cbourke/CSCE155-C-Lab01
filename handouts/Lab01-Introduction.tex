@@ -1,0 +1,314 @@
+\documentclass[12pt]{scrartcl}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.25cm}
+
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\usepackage{hyperref}
+\hypersetup{
+  letterpaper,
+  colorlinks,
+  linkcolor=red,
+  citecolor=darkgreen,
+  menucolor=darkred,
+  urlcolor=blue,
+  pdfpagemode=none,
+  pdftitle={Introduction To Git},
+  pdfauthor={Christopher M. Bourke},
+  pdfcreator={$ $Id: cv-us.tex,v 1.28 2009/01/01 00:00:00 cbourke Exp $ $},
+  pdfsubject={PhD Thesis},
+  pdfkeywords={}
+}
+
+\definecolor{MyDarkBlue}{rgb}{0,0.08,0.45}
+\definecolor{MyDarkRed}{rgb}{0.45,0.08,0}
+\definecolor{MyDarkGreen}{rgb}{0.08,0.45,0.08}
+
+\definecolor{mintedBackground}{rgb}{0.95,0.95,0.95}
+\definecolor{mintedInlineBackground}{rgb}{.90,.90,1}
+
+%\usepackage{newfloat}
+\usepackage[newfloat=true]{minted}
+\setminted{mathescape,
+               linenos,
+               autogobble,
+               frame=none,
+               framesep=2mm,
+               framerule=0.4pt,
+               %label=foo,
+               xleftmargin=2em,
+               xrightmargin=0em,
+               startinline=true,  %PHP only, allow it to omit the PHP Tags *** with this option, variables using dollar sign in comments are treated as latex math
+               numbersep=10pt, %gap between line numbers and start of line
+               style=default, %syntax highlighting style, default is "default"
+               			    %gallery: http://help.farbox.com/pygments.html
+			    	    %list available: pygmentize -L styles
+               bgcolor=mintedBackground} %prevents breaking across pages
+               
+\setmintedinline{bgcolor={mintedBackground}}
+\setminted[text]{bgcolor={mintedBackground},linenos=false,autogobble,xleftmargin=1em}
+%\setminted[php]{bgcolor=mintedBackgroundPHP} %startinline=True}
+\SetupFloatingEnvironment{listing}{name=Code Sample}
+\SetupFloatingEnvironment{listing}{listname=List of Code Samples}
+
+\title{CSCE 155 - C}
+\subtitle{Lab 01 - Introduction}
+\author{Dr.\ Chris Bourke}
+\date{~}
+
+\begin{document}
+
+\maketitle
+
+\section*{Prior to Lab}
+
+In each lab there may be pre-lab activities that you are \emph{required} to
+complete prior to attending lab.  Failure to do so may mean that you will
+not be given full credit for the lab.  For the first lab, there are no pre-lab
+activities.
+
+\section*{Peer Programming Pair-Up}
+
+To encourage collaboration and a team environment, labs will be
+structured in a \emph{pair programming} setup.  At the start of
+each lab, you will be randomly paired up with another student 
+(conflicts such as absences will be dealt with by the lab instructor).
+One of you will be designated the \emph{driver} and the other
+the \emph{navigator}.  
+
+The navigator will be responsible for reading the instructions and
+telling the driver what to do next.  The driver will be in charge of the
+keyboard and workstation.  Both driver and navigator are responsible
+for suggesting fixes and solutions together.  Neither the navigator
+nor the driver is ``in charge.''  Beyond your immediate pairing, you
+are encouraged to help and interact and with other pairs in the lab.
+
+Each week you should alternate: if you were a driver last week, 
+be a navigator next, etc.  Resolve any issues (you were both drivers
+last week) within your pair.  Ask the lab instructor to resolve issues
+only when you cannot come to a consensus.  
+
+Because of the peer programming setup of labs, it is absolutely 
+essential that you complete any pre-lab activities and familiarize
+yourself with the handouts prior to coming to lab.  Failure to do
+so will negatively impact your ability to collaborate and work with 
+others which may mean that you will not be able to complete the
+lab.  
+
+\section{Lab Objectives \& Topics}
+At the end of this lab you should be familiar with the following
+\begin{itemize}
+  \item The general lab environment \& CSE system including its policies and expectations
+  \item Basic unix commands
+  \item Retrieving lab code from Github
+  \item Modifying, compiling and executing your first C program
+  \item Using CSE's web handin and web grader
+\end{itemize}
+
+\section{Activities}
+
+\subsection{Login \& Consent Form}
+
+You will receive your login from the CSE System Administrators who will also 
+give you an overview of the CSE system and its policies.  Be sure to login and 
+change your temporary password.  Some departmental resources that you may
+find useful:
+\begin{itemize}
+  \item CSE Website: \url{http://cse.unl.edu}
+  \item UNL Computing Policy: \url{http://www.unl.edu/ucomm/compuse/}
+   \item CSE Academic Integrity Policy: \url{http://cse.unl.edu/academic-integrity-policy}
+   \item CSE System FAQ: \url{http://cse.unl.edu/faq}
+   \item Account Management: \url{https://cse-apps.unl.edu/amu/}
+   \item CSE Undergraduate Advising Page: \url{http://cse.unl.edu/advising}
+   \item CSE Student Resource Center: \url{http://cse.unl.edu/src}
+\end{itemize}
+
+\subsection{Lab Introduction}
+
+\begin{itemize}
+  \item Lab instructors and TAs
+  \item Office Hours
+  \item Student Resource Center (Avery 12)
+  \item Lab policies
+\end{itemize}
+
+\subsection{Basic Unix Commands}
+
+Much of your work will be done on the command line.  Take a moment to 
+familiarize yourself with the following basic commands.  A more comprehensive 
+tutorial on unix commands is available here: \url{http://www.math.utah.edu/lab/unix/unix-commands.html}.
+\begin{itemize}
+  \item Show the current working directory: \mintinline{text}{pwd}
+  \item Creating a new directory: \mintinline{text}{mkdir dirName}
+  \item Changing directories: \mintinline{text}{cd dir_name}
+  \item Moving up a directory: \mintinline{text}{cd ..}
+  \item Moving directly to your home directory: \mintinline{text}{cd ~}
+  \item Listing files in a directory: \mintinline{text}{ls}
+  \item Listing details of files in a directory: \mintinline{text}{ls -l}
+  \item Listing files in another directory: \mintinline{text}{ls dir_name}
+  \item Listing the contents of a (text) file: \mintinline{text}{more file_name}
+  \item Removing files (careful!):  \mintinline{text}{rm file_name}
+\end{itemize}
+
+\subsubsection*{Text Editors}
+
+Programming requires that you write code in a source file: a plain text file that 
+contains syntactically valid programming commands.  In general, any plain 
+text editor can facilitate this (MS Word is not a plain text editor).  The lab 
+instructor will demonstrate some of the following options: 
+\begin{itemize}
+  \item jpico
+  \item emacs
+  \item Notepad++ (a graphical editor launched from Windows)
+  \item Atom.io \url{https://atom.io/}
+  \item Sublime Text \url{https://www.sublimetext.com/}
+\end{itemize}
+
+\subsection{Checking Out Code From Github}
+
+Each lab will have some starter code and other \emph{artifacts} (data files, 
+scripts, etc.) that will be provided for to you.  However, the code is hosted
+on Github (\url{https://github.com}) and you must check it out.  You will not
+need to know the details of using git nor be a registered Github user to 
+get access to the code necessary for your labs or assignments.  However, 
+you are \emph{highly encouraged} to learn this essential tool.  You may find
+it very useful to keep track of your own code and to share code if you work
+in pairs or groups.  
+
+To check out the code for this lab, do the following.
+\begin{enumerate}
+  \item If you haven't already, connect to the CSE server using PuTTY as follows:
+  \begin{enumerate}
+    \item Open PuTTY (this is a Secure Shell Client, SSH)
+    \item Enter the address \mintinline{text}{cse.unl.edu}
+    \item Click ``Open''
+    \item Login using your CSE credentials (you may be prompted to change your password the first time).
+  \end{enumerate}
+  \item In your home directory, create a new directory for all your labs:\\  
+  \mintinline{text}{mkdir labs}  
+  \item Verify that this worked by listing the contents of your directory by
+  typing \mintinline{text}{ls}.  You should see your \mintinline{text}{labs} directory.
+   \item Go to this directory by changing your directory:\\
+  \mintinline{text}{cd labs}
+  \item ``Clone'' this lab's code by using the following command:\\
+  \mintinline{text}{git clone https://github.com/cbourke/CSCE155-C-Lab01}
+  \item A new directory, \mintinline{text}{CSCE155-C-Lab01} should be created, 
+  go to this directory by typing \mintinline{text}{cd CSCE155-C-Lab01}.
+  \item List the contents of this directory by typing \mintinline{text}{ls}.  If
+  everything worked, there should be a \mintinline{text}{hello.c} file in your
+  directory.
+\end{enumerate}
+
+\subsection{Your First Program: Hello World!}
+
+As this is an introductory course, most of the C programs you will write in 
+this course will execute and require interaction from the command line 
+rather than a more user-friendly graphical interface.  
+
+The code you cloned contains a basic ``Hello World'' program that, when
+compiled and run will simply print the message ``Hello World'' and exit.
+
+To compile and run this program, do the following.
+\begin{enumerate}
+  \item Type \mintinline{text}{gcc hello.c}, this \emph{compiles} the source code
+  	into an \emph{executable} file named \mintinline{text}{a.out}.  Use 
+	\mintinline{text}{ls} to verify that the new file has been created.  (Note: 
+	\mintinline{text}{a.out} is the default file name, to specify a different
+	executable file name you can instead use \mintinline{text}{gcc -o foo hello.c}
+	for example, to compile to a file named \mintinline{text}{foo} instead of
+	\mintinline{text}{a.out}).
+  \item Run your program by typing the following: \mintinline{text}{./a.out}
+\end{enumerate}
+
+Let's now modify the program. 
+
+\begin{enumerate}
+  \item Open the \mintinline{text}{hello.c} source file in the text editor of
+  	your choice (Notepad++ is recommended for beginners).
+  	Your program should look something like the following:
+
+\begin{minted}{c}
+/**
+ * Author: Chris Bourke
+ * Date: 2016/11/02
+ *
+ * A simple hello world program in C
+ *
+ */
+#include<stdlib.h>
+#include<stdio.h>
+
+int main(int argc, char **argv) {
+
+  printf("Hello World!\n");
+
+  return 0;
+}
+\end{minted}
+  \item Modify the file by changing the author to you and your partner and change
+  	the date.
+  \item Change the message that is produced by the program (line 10) to instead
+  	print you and your partner's names.
+  \item Save and exit your editor and repeat the process to compile and run
+  	your program and verify that your changes have taken effect.
+\end{enumerate}
+
+\section{Handing In \& Grading}
+
+Many of your assignments will include a programming portion that will 
+require you to hand in \emph{soft-copy} source files for graders to compile 
+and evaluate.  To do this, you will use a web-based handin program.  
+After handing your file(s) in, you can then grade them by using the
+web grader.  To demonstrate, do the following.
+
+\begin{enumerate}
+  \item Open a browser to \url{https://cse-apps.unl.edu/handin}
+  \item Login with your CSE credentials
+  \item Click on this course/lab 01 and handin the \mintinline{text}{hello.c} file.  You can
+  either click the large ``handin'' area and select the file or you can drag-drop
+  the file.  You will be able to re-handin the same file as many times as you want up until
+  the due date.
+  \item Now that the file has been handed in, you can ``grade'' yourself by using
+  the webgrader; open a new tab/window and point your browser to one of the following
+  depending on which course you are in:
+  \begin{itemize}
+    \item \url{https://cse.unl.edu/~cse155a/grade}
+    \item \url{https://cse.unl.edu/~cse155e/grade}
+    \item \url{https://cse.unl.edu/~cse155h/grade}
+  \end{itemize}
+  \item Fill the form with your CSE login and password, select the appropriate assignment (Lab 01)
+  	and click ``Grade''
+  \item For future assignments and labs, you can compare the results of 
+  	your program with the ``Expected Results''.  If there are problems or errors with
+	your program(s), you should fix/debug them and repeat the handin/grading process.
+	You can do this as many times as you like up until the due date.  Some programs 
+	and assignments will run test cases and may provide expected output alongside 
+	your output.  Others may have more sophisticated test cases and actually provide 
+	you a percentage of test cases passed.  It is your responsibility to read, 
+	understand and \emph{address} all of the errors and/or warnings that the grader produces.
+\end{enumerate}
+
+Demonstrate your working programs to a lab instructor, answer all the 
+questions on your lab worksheet, and have them sign off on it.
+
+\section*{Resources}
+
+\begin{itemize} 
+  \item Windows users can download and use PuTTY on their own machines: \\
+  	\url{http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html}
+  \item Mac users already have an SSH client as part of their OS.  Open a terminal and type:
+  	\mintinline{text}{ssh login@cse.unl.edu} where login is replaced with
+	your own login; provide your password and you're at the CSE command line
+  \item You may also find FileZilla useful (\url{http://filezilla-project.org/}).  It is a 
+  	free File Transfer Protocol (FTP) client that you can use to transfer files 
+	back and forth from your machine to your CSE account.
+  \item Many other options exist for developing code on your own machine, see the 
+    course page for more resources.
+\end{itemize}
+
+\end{document}
