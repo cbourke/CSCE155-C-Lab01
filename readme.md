@@ -1,8 +1,8 @@
 # Computer Science I
-## Lab 01 - Getting Started
+## Lab 1.0 - Getting Started
 
 This project is a simple "Hello World" program written in C.
-To compile using gcc from the commnand line:
+To compile using gcc from the command line:
 
 `gcc hello.c`
 
