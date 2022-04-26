@@ -131,7 +131,7 @@ files you save in the IDE will be available next time you login.
 
 4. Observe the major layout areas:
 
-![IDE Areas](img/03idescreenHighlight.png)
+![IDE Areas](img/03idescreenHighlighted.png)
 
 1.  File Explorer - This is a graphical file explorer in which you can
     right click and create new directories (folders) and files, drag and
