@@ -1,7 +1,7 @@
 /**
- * Author: Chris Bourke
- *         cbourke@cse.unl.edu
- * Date: 2020/03/26
+ * Author: NAME
+ *         EMAIL
+ * Date: 20xx/xx/xx
  *
  * A simple hello world program in C
  *
