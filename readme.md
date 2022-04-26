@@ -31,21 +31,21 @@ not prepared to complete the lab.
 Some other department and university computing resources and policies
 can be found at the following:
 
-  -   CSE Website: <http://computing.unl.edu>
+  -   SoC Website: <http://computing.unl.edu>
 
   -   UNL Computing Policy: <http://www.unl.edu/ucomm/compuse/>
 
-  -   CSE Academic Integrity Policy:
+  -   SoC Academic Integrity Policy:
       <http://computing.unl.edu/academic-integrity-policy>
 
-  -   CSE System Frequently Asked Questions (FAQ):
+  -   SoC System Frequently Asked Questions (FAQ):
       <http://computing.unl.edu/faq>
 
-  -   CSE Account Management: <https://cse-apps.unl.edu/amu/>
+  -   SoC Account Management: <https://cse-apps.unl.edu/amu/>
 
-  -   CSE Undergraduate Advising Page: <http://computing.unl.edu/advising>
+  -   SoC Undergraduate Advising Page: <http://computing.unl.edu/advising>
 
-  -   CSE Student Resource Center: <http://computing.unl.edu/src>
+  -   SoC Student Resource Center: <http://computing.unl.edu/src>
 
 ## Peer Programming Pair-Up
 
@@ -131,7 +131,7 @@ files you save in the IDE will be available next time you login.
 
 4. Observe the major layout areas:
 
-![IDE Areas](img/035idescreenHighlight.png)
+![IDE Areas](img/03idescreenHighlight.png)
 
 1.  File Explorer - This is a graphical file explorer in which you can
     right click and create new directories (folders) and files, drag and
