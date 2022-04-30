@@ -324,49 +324,72 @@ Boring. Been there done that. So, let's modify the program.
 ## Submitting & Grading Your Program
 
 Many of your assignments will include a programming portion that will
-require you to hand in *soft copy* source files for graders to compile
-and evaluate. To do this, you will use [codepost.io](https://codepost.io).
+require you to hand in source files for graders to compile and evaluate.  
+To do this, you will use a the CSE webhandin.
 
-1.  First, we need to get your source file to *your computer*. Right
-    now, the files only exist on the remote IDE server. Right click on the
-    `hello.c` file and click "Download...". You can also download a
-    copy of your entire project or a part of it by right clicking a
-    directory and downloading it.  Though your files are saved it is a
-    good idea to periodically **backup your project** by downloading
-    it (but using git is a much better solution).
+ * First, we need to get your source file to *your computer*.
+   Right now, the files only exist on the IDE server.  Right click
+   on the `hello.c` file and click download.  You can also download
+   a copy of your entire project by right-clicking a folder
+   (in fact, it is a good idea to periodically backup your project by
+   downloading it, but using git is a much better solution).
+ * Point a new browser tab to <https://cse-apps.unl.edu/handin>
+ * Login with your CSE credentials
+ * Click on this course and lab 1.0.  You can either click the
+   large "handin" area and select your downloaded `hello.c`
+   file or you can drag-drop the file.  You can (re)submit the same file as
+   many times as you want up until the due date.  
 
-2.  Point a new browser tab to <https://codepost.io> and login.
+Some things to understand about webhandin:
 
-3.  Under the appropriate assignment, click "Upload assignment")
+ * File names are case sensitive and you may only submit files
+   with names as specified by the particular assignment
+ * There is no need to delete the file if you need to resubmit
+   it, the old version will be overwritten
+ * If you make no changes to the file the resubmission will be rejected
+ * The most common mistake is handing in the *wrong version*
+   of a file, so be aware of which file(s) you're handing in
 
-![IDE](img/codepost01submission.png)
+## Grading Your Program
 
-4.  Upload your `hello.c` source file (Upload files) and click "Submit and run tests"
+Now that the file has been handed in, you can "grade" yourself
+by using the webgrader.
 
-![IDE](img/codepost02submitAndRun.png)
+ * Open a new tab/window and point your browser to one of
+   the following depending on which course you are in:
+   * CSCE 155E: \url{https://cse.unl.edu/~cse155e/grade}
+   * CSCE 155H: \url{https://cse.unl.edu/~cse155h/grade}
+   * ECEN 194: \url{https://cse.unl.edu/~c-ecen194/grade}
+ * Login using your CSE credentials
+ * Select the appropriate assignment (Lab 01), click "Grade" and
+   observe the results.
 
-5.  Once uploaded, you should can "View test results"
+Some things to understand about webgrader:
 
-![IDE](img/codepost03success.png)
+ * For future assignments and labs, you can compare the results of
+   your program with the "Expected Result".  In general, the output
+	 does not need to match *exactly* as long as you report *at least*
+	 as much information as the expected output, you're probably good.
+ * If there are problems or errors with your program(s),
+   you should fix/debug them and repeat the handin/grading process.
+	 You can do this as many times as you like up until the due date.  
+ * Some programs and assignments will run test cases and may provide
+   expected output alongside your output.  Others may have more
+   sophisticated test cases and actually provide you a percentage of
+   test cases passed.  It is your responsibility to read, understand
+   and *address* any and all errors and/or warnings that the grader
+   produces.
+ * The webgrader is a **black box** tester meaning you don't have
+   access to its internal workings.  You should properly and thoroughly test
+   and debug your programs locally instead of relying on webgrader as a
+   "blind tester."
 
-6.  Assuming your code works, all tests should *pass* and your points will be awarded.  
+## Codepost.io
 
-![IDE](img/codepost04results.png)
-
-7.  If any tests fail it will look something like the following.  You will need to edit, fix and resubmit your code.
-
-![IDE](img/codepost05failure.png)
-
-Some things to understand about [codepost](https://codepost.io):
-
--   All tests are automatically executed with your submission
-    If there are problems or errors with your program(s), you should
-    fix/debug them and repeat the handin/grading process. You can do
-    this as many times as you like up until the due date.
-
--   Codepost is a *black box* tester meaning you don't have access
-    to its internal workings. You should properly and thoroughly test
-    and debug your programs locally instead of relying on the online
-    grader as a "blind tester".
+For many assignments (hacks, project, exam) we use a web-based assessment
+app called codepost.io (<https://codepost.io>).  You would have received an
+invitation to this website from your instructor.  As a last step to the lab,
+be sure you have accepted the invite and can login to the system.  You will
+receive further instructions with your first hack.
 
 ***Congratulations on your first lab!***
