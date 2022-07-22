@@ -25,8 +25,8 @@ not prepared to complete the lab.
 
 2.  Accept the invite that your instructor sent out from
     [codepost.io](https://codepost.io) and be sure you can sign in.
-    You will handin labs, hacks and other assignments as as grade
-    your code and receive feedback from graders.
+    Graders will provide line-by-line feedback on  your hacks, exams
+    and other assignments using this site.
 
 Some other department and university computing resources and policies
 can be found at the following:
