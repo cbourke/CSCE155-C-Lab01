@@ -96,9 +96,9 @@ At the end of this lab you should be familiar with the following
 
   -   Modifying, compiling and executing your first C program
 
-  -   Using [codepost.io](https://codepost.io) to hand in and
-      grade your code
-
+  -   Using [codepost.io](https://codepost.io) to view grader
+      feedback
+      
 # Activities
 
 ## Getting Started
