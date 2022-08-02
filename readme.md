@@ -98,7 +98,7 @@ At the end of this lab you should be familiar with the following
 
   -   Using [codepost.io](https://codepost.io) to view grader
       feedback
-      
+
 # Activities
 
 ## Getting Started
@@ -357,9 +357,9 @@ by using the webgrader.
 
  * Open a new tab/window and point your browser to one of
    the following depending on which course you are in:
-   * CSCE 155E: \url{https://cse.unl.edu/~cse155e/grade}
-   * CSCE 155H: \url{https://cse.unl.edu/~cse155h/grade}
-   * ECEN 194: \url{https://cse.unl.edu/~c-ecen194/grade}
+   * CSCE 155E: https://cse.unl.edu/~cse155e/grade
+   * CSCE 155H: https://cse.unl.edu/~cse155h/grade
+   * ECEN 194: https://cse.unl.edu/~c-ecen194/grade
  * Login using your CSE credentials
  * Select the appropriate assignment (Lab 01), click "Grade" and
    observe the results.
