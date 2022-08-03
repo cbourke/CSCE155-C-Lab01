@@ -153,7 +153,7 @@ Let's get started an setup our environment.
     the rest of the semester.  Execute the following commands by
     typing each into the TUI console:
     ```bash
-    mkdir /workspace/CS1
+    mkdir /workspaces/CS1
     mkdir /workspaces/CS1/labs
     mkdir /workspaces/CS1/hacks
     mkdir /workspaces/CS1/misc
