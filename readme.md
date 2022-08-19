@@ -169,7 +169,7 @@ Let's get started an setup our environment.
     want to work in the `CS1` directory where we made our directories.
     So, let's *change directories* by executing the following command:
 
-    `cd CS1`
+    `cd /workspaces/CS1`
 
     ***Note***: you will need to change directories every time you login
     to your IDE (this is necessary because the IDE prevents you from
