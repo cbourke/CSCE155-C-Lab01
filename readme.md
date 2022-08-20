@@ -176,6 +176,23 @@ Let's get started an setup our environment.
     using git in the `/workspaces/123456` directory for
     ["reasons"](https://cs50.readthedocs.io/code/#using-git)).
 
+    ***HOWEVER***: there is a nice permanent solution:
+
+    a) create a file in your file explorer and call it `profile`, edit
+    it and place the following contents into it:
+
+    ```
+    echo "Moving to CS1 folder..."
+    cd /workspaces/CS1
+    ```
+
+    b) Move this (configuration) file by executing the command:
+
+    `mv profile /home/ubuntu/.profile`
+
+    Now every time you login, the profile configuration will automatically
+    take you to the correct directory in the terminal!
+
 ### Basics
 
 You can create files in your IDE either by:
