@@ -114,7 +114,7 @@ don't have to install any software.  It is free and you login
 using your GitHub account. It also offers a *persistent* environment:
 files you save in the IDE will be available next time you login.
 
-1. Point your browser to <https://ide.cs50.io/> sign in with GitHub:
+1. Point your browser to <https://code.cs50.io/> sign in with GitHub:
 
 ![Login Page](img/01vscodeLogin.png)
 
