@@ -28,7 +28,7 @@ not prepared to complete the lab.
     Graders will provide line-by-line feedback on  your hacks, exams
     and other assignments using this site.
 
-Some other department and university computing resources and policies
+Some other School of Computing (Soc) and university computing resources and policies
 can be found at the following:
 
   -   SoC Website: <http://computing.unl.edu>
@@ -41,8 +41,6 @@ can be found at the following:
   -   SoC System Frequently Asked Questions (FAQ):
       <http://computing.unl.edu/faq>
 
-  -   SoC Account Management: <https://cse-apps.unl.edu/amu/>
-
   -   SoC Undergraduate Advising Page: <http://computing.unl.edu/advising>
 
   -   SoC Student Resource Center: <http://computing.unl.edu/src>
@@ -51,8 +49,7 @@ can be found at the following:
 
 ***For students in online section(s):*** you may complete
 the lab on your own if you wish or you may team up with a partner
-of your choosing, or, you may consult with a lab instructor to get
-teamed up online (via Zoom).
+of your choosing.
 
 ***For students in the on campus section:*** your lab instructor
 may team you up with a partner.  
@@ -87,7 +84,7 @@ lab.
 
 At the end of this lab you should be familiar with the following
 
-  -   The [Visual Studio Code](https://code.cs50.io/) IDE that
+  -   The [Visual Studio Code](https://cs50.dev/) IDE that
       you'll use for this course
 
   -   Basic unix commands
@@ -108,13 +105,13 @@ Let's get started. In order to develop programs in C you'll need:
  * a compiler to compile the C code into executable machine code, and
  * a runtime environment to actually execute your program
 To do this, we'll walk you through how to use the **Visual Studio Code**
-(<https://code.cs50.io/>) online IDE (Integrated Development
+(<https://cs50.dev/>) online IDE (Integrated Development
 Environment). This is a web browser-based IDE which means you
 don't have to install any software.  It is free and you login
 using your GitHub account. It also offers a *persistent* environment:
 files you save in the IDE will be available next time you login.
 
-1. Point your browser to <https://code.cs50.io/> sign in with GitHub:
+1. Point your browser to <https://cs50.dev/> sign in with GitHub:
 
 ![Login Page](img/01vscodeLogin.png)
 
@@ -186,12 +183,16 @@ Let's get started an setup our environment.
     cd /workspaces/CS1
     ```
 
-    b) Move this (configuration) file by executing the command:
+    b) Copy this (configuration) file by executing the command:
 
-    `mv profile /home/ubuntu/.profile`
+    `cp profile /home/ubuntu/.profile`
 
     Now every time you login, the profile configuration will automatically
-    take you to the correct directory in the terminal!
+    take you to the correct directory in the terminal!  
+
+    ***NOTE***: if you ever update or "rebuild" your IDE, you will need to
+    **recopy** this configuration file above to ensure you are in the
+    correct directory.
 
 ### Basics
 
