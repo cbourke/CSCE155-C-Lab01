@@ -29,3 +29,6 @@ figures/_minted*
 
 #
 .DS_Store
+
+# solution
+solution/
