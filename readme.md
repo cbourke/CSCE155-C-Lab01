@@ -333,81 +333,83 @@ Boring. Been there done that. So, let's modify the program.
 2.  Modify the file by changing the author to you (and your partner if
     you have one) and change the date.
 
-3.  Add a new line below the line that prints "Hello World!" that
-    prints your (and your partner's) names by using the `printf` line
+3.  Add a new line *below* the line that prints `Hello World!` that
+    prints `I love the School of Computing!` using the `printf` line
     as an example.
 
 4.  Save, compile and run your program to make sure it works.
 
 ## Submitting & Grading Your Program
 
-Many of your assignments will include a programming portion that will
-require you to hand in source files for graders to compile and evaluate.  
-To do this, you will use a the CSE webhandin.
+Nearly all of your assignments (labs, hacks, exams) will include a
+programming portion that will require you to hand in source files
+for graders to compile and evaluate.  To do this, we use a web-based
+assessment app called codepost.io (<https://codepost.io>).  
 
- * First, we need to get your source file to *your computer*.
-   Right now, the files only exist on the IDE server.  Right click
-   on the `hello.c` file and click download.  You can also download
-   a copy of your entire project by right-clicking a folder
-   (in fact, it is a good idea to periodically backup your project by
-   downloading it, but using git is a much better solution).
- * Point a new browser tab to <https://cse-apps.unl.edu/handin>
- * Login with your CSE credentials
- * Click on this course and lab 1.0.  You can either click the
-   large "handin" area and select your downloaded `hello.c`
-   file or you can drag-drop the file.  You can (re)submit the same file as
-   many times as you want up until the due date.  
+You should have received an invitation to this website from your
+instructor through your email account (typically your `@huskers.unl.edu`
+email or whatever email you have associated with on Canvas).  If
+you have access, great.  If not, go to <https://codepost.io/forgot-password>
+and "reset" your password (even if you never initially set one).  Be
+sure to use your huskers email or whatever primary email is associated
+with your canvas profile.
 
-Some things to understand about webhandin:
+To handin and grade your lab, do the following.
 
- * File names are case sensitive and you may only submit files
-   with names as specified by the particular assignment
- * There is no need to delete the file if you need to resubmit
-   it, the old version will be overwritten
- * If you make no changes to the file the resubmission will be rejected
- * The most common mistake is handing in the *wrong version*
-   of a file, so be aware of which file(s) you're handing in
+1. First, we need to get your source file (`hello.c`) on to *your*
+   computer. Right now, the files only exist on the IDE server. Right
+   click on the `hello.c` file and click download.
 
-## Grading Your Program
+2. Login to <https://codepost.io>.  It should immediately take you to the
+   assignment submission page:
 
-Now that the file has been handed in, you can "grade" yourself
-by using the webgrader.
+![Codepost.io Assignments](img/codepost01-assignments.png)
 
- * Open a new tab/window and point your browser to one of
-   the following depending on which course you are in:
-   * CSCE 155E: https://cse.unl.edu/~cse155e/grade
-   * CSCE 155H: https://cse.unl.edu/~cse155h/grade
-   * ECEN 194: https://cse.unl.edu/~c-ecen194/grade
- * Login using your CSE credentials
- * Select the appropriate assignment (Lab 01), click "Grade" and
-   observe the results.
+3. Click "Upload Assignment" which will bring up a dialog box:
 
-Some things to understand about webgrader:
+![Codepost.io Submission](img/codepost02-submission.png)
 
- * For future assignments and labs, you can compare the results of
-   your program with the "Expected Result".  In general, the output
-	 does not need to match *exactly* as long as you report *at least*
-	 as much information as the expected output, you're probably good.
+Click "Upload files" and select the `hello.c` source file you downloaded.
+Then click ![Submit Button](img/codepost03-button.png)
+
+4. You should see something like the following:
+
+![Codepost.io Success](img/codepost04-success.png)
+
+***HOWEVER*** this does not mean that your program(s) worked, only that
+they were uploaded.  You ***still need to view the results!!!***
+
+5. Click on ![View Tests Button](img/codepost05-testButton.png) to
+view the test results which will give you more details.  If any
+test(s) failed, you should see:
+
+![Codepost.io Fail View](img/codepost07-failResults.png)
+
+You can click on the + button to see more details.  However, if
+all tests passed, you should see something like this:
+
+![Codepost.io Success View](img/codepost06-successResults.png)
+
+Some things to understand about the grading process:
+
  * If there are problems or errors with your program(s),
    you should fix/debug them and repeat the handin/grading process.
 	 You can do this as many times as you like up until the due date.  
- * Some programs and assignments will run test cases and may provide
-   expected output alongside your output.  Others may have more
-   sophisticated test cases and actually provide you a percentage of
-   test cases passed.  It is your responsibility to read, understand
+ * Some programs and assignments *may* require the output to be *exact*
+   including any upper/lower case text and numbers accurate to a
+   certain number of decimal points
+ * Some programs and assignments may only require part of the output to be correct and may
+   ignore other formatting (spaces for example).
+ * Some programs and assignments may need to be manually examined by
+   graders to award points.
+ * Some programs and assignments have more
+   sophisticated test suites that run hundreds or thousands of tests.
+ * In any case, it is **your responsibility to read, understand
    and *address* any and all errors and/or warnings that the grader
-   produces.
- * The webgrader is a **black box** tester meaning you don't have
+   produces**.
+ * The grader is a **black box** tester meaning you don't have
    access to its internal workings.  You should properly and thoroughly test
-   and debug your programs locally instead of relying on webgrader as a
+   and debug your programs locally instead of relying on it as a
    "blind tester."
-
-## Codepost.io
-
-For many assignments (hacks, project, exam) we use a web-based assessment
-app called codepost.io (<https://codepost.io>).  You would have received an
-invitation to this website from your instructor.  As a last step to the lab,
-be sure you have accepted the invite and can login to the system.  You will
-receive further instructions with your first hack.
 
 ***Congratulations on your first lab!***
